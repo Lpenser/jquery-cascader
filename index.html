@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://content.banggood.cn/Content/lib/bootstrap-3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://content.banggood.cn/Content/lib/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://content.banggood.cn/Content/Banggood/css/listview.css"/>
+    <link rel="stylesheet" href="https://content.banggood.cn/Content/icon/css/sprites.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script src="https://content.banggood.cn/Content/lib/requirejs/require.js"></script>
+</head>
+<body>
+    <div class="form-horizontal" id="content" style="padding:20px">
+        <div class="form-group">
+          <div class="col-sm-2">
+            <input type="text" class="form-control input-sm" id="department">
+          </div>
+        </div>
+      </div>
+    <script>
+    requirejs(['https://content.banggood.cn/Content/config.js'], function () {
+      requirejs(['./dist/cascaderDataSelect.js'], function(CascaderDataSelect) {
+        new CascaderDataSelect('#department', {
+            cascaderData: [{
+                name:11,
+                age:78
+            }]
+        })
+      })
+    })
+    
+    
+    </script>
+</body>
+</html>

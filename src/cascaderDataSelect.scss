@@ -1,0 +1,15 @@
+.tree-wrap-fixed {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    width: 250px;
+    background: #fff;
+    box-shadow: #eee 3px 3px 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-top: -1px;
+  }
+  .tree-body {
+    padding: 8px 0 0 8px;
+    overflow: auto;
+  }
