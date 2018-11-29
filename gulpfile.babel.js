@@ -3,19 +3,14 @@ import babel from 'gulp-babel';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
 import sass from 'gulp-sass';
-import eslint from 'gulp-eslint';
-import scsslint from 'gulp-scss-lint';
 
 const paths = {
-  src: {
-    js: 'src/cascaderDataSelect.js',
-    scss: 'src/cascaderDataSelect.scss',
-  },
-  dest: 'dist',
+  src: 'src/',
+  dest: 'dist/',
 };
 
 gulp.task('babel', () => {
-  return gulp.src(paths.src.js)
+  return gulp.src(paths.src + '/**/*.js')
     .pipe(babel({
       "presets": ["es2015", "stage-0"],
       "plugins": [
@@ -33,7 +28,7 @@ gulp.task('babel', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src(paths.src.scss)
+  return gulp.src(paths.src + '/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest(paths.dest));
 });
